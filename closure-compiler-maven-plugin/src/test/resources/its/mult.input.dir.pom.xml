@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- 
+  Pom for testing
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mobilizadores</groupId>
+  <artifactId>bundle-output</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
+  <build>
+    <resources>
+    	<resource>
+    		<filtering>true</filtering>
+    		<directory>src/main/resources</directory>
+    	</resource>
+    </resources>
+    <plugins>
+    	<plugin>
+    		<groupId>org.mobilizadores</groupId>
+    		<artifactId>closure-compiler-maven-plugin</artifactId>
+    		<version>A</version>
+    		<configuration>
+    			<inputDirectories>
+	    			<inputDirectory>src/test/resources/dir1</inputDirectory>
+	    			<inputDirectory>src/test/resources/dir2</inputDirectory>
+    			</inputDirectories>
+    			<outputDirectory>src/test/resources/output</outputDirectory>
+    			<outputFile>src/test/resources/output/compressed/output.js</outputFile>
+    			<moduleRoot>
+    				<root>src/test/resources/dir1</root>
+    			</moduleRoot>
+    			<externFiles>
+    				<extern>src/test/resources/dir1/extern1.js</extern>
+    			</externFiles>
+    		</configuration>
+    		<executions>
+    			<execution>
+    				<phase>prepare-package</phase>
+    				<goals>
+    					<goal>compress</goal>
+    				</goals>
+    			</execution>
+    		</executions>
+    	</plugin>
+    </plugins>
+  </build>
+</project>

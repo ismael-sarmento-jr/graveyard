@@ -1,0 +1,1 @@
+import Test from './file22.js';
