@@ -4,7 +4,7 @@ import org.apache.maven.plugin.logging.Log;
 
 /**
  * Encapsulates the default logger, instantiated by Maven engine. Must be used throughout
- * the plugin, to guarantee cohese message format for
+ * the plugin, to guarantee coherent message format for
  * output and also outputs debug messages only if Maven's debug mode is enabled. 
  */
 public class MojoLogger {

@@ -1,0 +1,160 @@
+@Parameter
+Boolean displayHelp;
+@Parameter
+Boolean helpMarkdown;
+
+/* Mojos */
+	@Parameter
+	Boolean printTree;
+	@Parameter
+	Boolean printAst;
+	@Parameter
+	Boolean printPassGraph;
+	@Parameter(defaultValue = "true")
+
+
+	/*
+	 * ************************* 
+	 * DERIVED PROPS
+	 *************************/
+
+	@Parameter
+	Integer browserFeaturesetYear;
+	@Parameter
+	Boolean emitUseStrict;
+	@Parameter(defaultValue = "true")
+	Boolean strictModeInput;
+	@Parameter(defaultValue = "OFF")
+	String jscompDevMode = "OFF";
+
+	@Parameter
+	List<String> unusedJsZip;
+	@Parameter
+	List<String> chunk;
+	@Parameter
+	String continueSavedCompilationFile;
+	@Parameter
+	String saveAfterChecksFile;
+	@Parameter
+	String variableMapOutputFile;
+	@Parameter
+	Boolean createNameMapFiles;
+	@Parameter
+	Boolean sourceMapIncludeSourcesContent;
+	@Parameter
+	String propertyMapOutputFile;
+	@Parameter
+	Boolean thirdParty;
+	@Parameter
+	Integer summaryDetailLevel;
+	@Parameter(defaultValue = "NONE")
+	String isolationMode;
+	@Parameter
+	String outputWrapper;
+	@Parameter
+	String outputWrapperFile;
+	@Parameter
+	List<String> chunkWrapper;
+	@Parameter(defaultValue = "./")
+	String chunkOutputPathPrefix;
+	@Parameter
+	String createSourceMap;
+	@Parameter(defaultValue = "DEFAULT")
+	String sourceMapFormat;
+	@Parameter
+	List<String> sourceMapLocationMapping;
+	@Parameter
+	List<String> sourceMapInputs;
+	@Parameter
+	Boolean parseInlineSourceMaps;
+	@Parameter
+	Boolean applyInputSourceMaps;
+	@Parameter
+	List<String> define;
+	
+	@Parameter
+	Boolean checksOnly;
+	@Parameter(defaultValue = "OFF")
+	String incrementalCheckMode;
+	@Parameter
+	Boolean continueAfterErrors;
+	@Parameter(defaultValue = "true")
+	Boolean useTypesForOptimization;
+	@Parameter
+	Boolean assumeFunctionWrapper;
+	@Parameter
+	Boolean debug;
+	@Parameter
+	Boolean generateExports;
+	@Parameter
+	Boolean exportLocalPropertyDefinitions;
+	@Parameter
+	List<String> formatting;
+	@Parameter
+	Boolean processCommonJsModules;
+	@Parameter
+	List<String> commonJsPathPrefix;
+	@Parameter(defaultValue = "true")
+	Boolean processClosurePrimitives;
+	@Parameter
+	Boolean angularPass;
+	@Parameter
+	Integer polymerVersion;
+	@Parameter
+	String polymerExportPolicy;
+	@Parameter
+	Boolean chromePass;
+	@Parameter
+	Boolean dartPass;
+	@Parameter
+	String j2clPassMode = "AUTO";
+	@Parameter
+	String outputManifest;
+	@Parameter
+	String outputChunkDependencies;
+	@Parameter
+	String translationsFile;
+	@Parameter
+	String translationsProject;
+	@Parameter
+	List<String> flagFiles;
+	@Parameter
+	String warningsWhitelistFile;
+	@Parameter
+	List<String> hideWarningsFor;
+	@Parameter
+	List<String> extraAnnotationName;
+	@Parameter(defaultValue = "OFF")
+	String tracerMode;
+	@Parameter
+	String renamePrefix;
+	@Parameter
+	String renamePrefixNamespace;
+	@Parameter
+	List<String> conformanceConfigs;
+	
+	@Parameter(defaultValue = "NONE")
+	String jsonStreamMode;
+	@Parameter
+	Boolean preserveTypeAnnotations;
+	@Parameter(defaultValue = "true")
+	Boolean injectLibraries;
+	@Parameter
+	List<String> forceInjectLibraries;
+	@Parameter
+	List<String> entryPoint;
+	@Parameter(defaultValue = "true")
+	Boolean rewritePolyfills;
+	@Parameter
+	Boolean printSourceAfterEachPass;
+	@Parameter(defaultValue = "BROWSER")
+	String moduleResolutionMode = "BROWSER";
+	@Parameter
+	Map<String, String> browserResolverPrefixReplacements;
+	@Parameter
+	String packageJsonEntryNames;
+	@Parameter(defaultValue = "STANDARD")
+	String errorFormat;
+	@Parameter(defaultValue = "true")
+	Boolean renaming;
+		

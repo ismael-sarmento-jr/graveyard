@@ -1,0 +1,37 @@
+- fail mojo on compilation fail
+- info to debug
+- add init end info
+- error trying comp level BUNDLE
+- encapsulate compiler options
+- what if informed nested directories; and what if the include files are already contained
+- only files in root module can be found (?)
+- send msg if exec time is not enough
+- does it occur null pointer exception if outputDir is not specified?
+- is preserving the name of file (no suffix) working?
+- is runnable cc true concurrent?
+- thread pool should shutdown and build fail on any compilation error (?)
+- imports do tipo '../script' podem nao estar funcionando
+- should use buildContext? https://www.eclipse.org/m2e/documentation/m2e-making-maven-plugins-compat.html
+
+====================
+ERROR - [JSC_JS_MODULE_LOAD_WARNING] Failed to load module "../app/components/list-navs/list-navs.js"
+when using moduleRoot
+for instance, using '..app' for module root in test exec, instead of '..WEB-INF'
+
+===========================
+Exception when plugin descriptor is not found
+
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: java.util.NoSuchElementException
+      role: org.apache.maven.plugin.Mojo
+  roleHint: org.mobilizadores:closure-compiler-maven-plugin:0.0.3-SNAPSHOT:version
+...
+Caused by: java.util.NoSuchElementException
+	at java.util.Collections$EmptyIterator.next(Collections.java:4189)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263)
+	... 33 more
+============================
+G:/REPOS/mobilizadores/mblz-webapp/target/classes/META-INF/resources/WEB-INF/app/calls/list-form/list-calls-form.js:55:2: ERROR - [JSC_IMPORT_CANNOT_BE_REASSIGNED] Assignment to constant variable "urlOpenCalls".
+  55| 		urlOpenCalls = '/api/v1.0/calls/find?';
+      		^^^^^^^^^^^^
+1 error(s), 0 warning(s)
+

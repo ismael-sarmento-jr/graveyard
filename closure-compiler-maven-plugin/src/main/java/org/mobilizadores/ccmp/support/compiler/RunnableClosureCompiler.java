@@ -43,7 +43,7 @@ public class RunnableClosureCompiler extends Observable implements SynchronizedR
 
 	/**
 	 * Invokes the method <i>run</i> in the command line runner instance (clr). The
-	 * list of'mixedJsSources' in {@link CommandLineRunner#Flags} is static, set
+	 * list of 'mixedJsSources' in {@link CommandLineRunner#Flags} is static, set
 	 * during a new <i>clr</i> instantiation and read during configuration
 	 * initiation, therefore the instantiation of <i>clr</i> and subsequent access
 	 * to the list are synchronized. The results of the tasks are reported to the

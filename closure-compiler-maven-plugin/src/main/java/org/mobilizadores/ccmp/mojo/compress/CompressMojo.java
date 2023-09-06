@@ -112,7 +112,7 @@ public class CompressMojo extends ClosureCompilerMojo {
 	)
 	String languageOut;
 	
-	@Parameter
+	@Parameter(alias="jsModuleRoot")
 	@Option(name = "--js_module_root")
 	List<String> moduleRoot;
 	

@@ -8,9 +8,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 class JscompGroupThreadFactory implements ThreadFactory {
     
-	public static final String JSCOMP_PREFIX = "jscomp";
-	private final ThreadGroup group;
-	private final String threadNamePrefix;
+    public static final String JSCOMP_PREFIX = "jscomp";
+    private final ThreadGroup group;
+    private final String threadNamePrefix;
 
     private static final AtomicInteger poolNumber = new AtomicInteger(1);
     private final AtomicInteger threadNumber = new AtomicInteger(1);
@@ -28,12 +28,12 @@ class JscompGroupThreadFactory implements ThreadFactory {
     }
 
     /**
-     * Sets the prority to the foreground thread
+     * Sets the priority to the foreground thread
      */
-	private void setForegroundPriority(Thread t, int priority) {
-		if (t.isDaemon()) {
-        	t.setDaemon(false);
+    private void setForegroundPriority(Thread t, int priority) {
+        if (t.isDaemon()) {
+            t.setDaemon(false);
         }
-		t.setPriority(priority);
-	}
+        t.setPriority(priority);
+    }
 }
