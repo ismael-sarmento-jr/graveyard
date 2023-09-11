@@ -196,7 +196,7 @@ The same log information can be observed by other implementations; this has been
 
 ### Unit and Integration Tests
 
-It is being used JUnit and Maven Test-Harness for both unit and integration tests. Unit tests are performed for support classes. Mojos are tested in integration level. To test mojo `compress`, the directory `test/resources` contains js source files which serve as input files to be optimized; each batch of tests uses a different pom file in `test/resources/its`. Observers are registered in ExecutionEvironment, which is a Notifier and the notifications are checked/asserted as they arrive.
+It is being used JUnit and Maven Test-Harness for both unit and integration tests. Unit tests are performed for support classes. Mojos are tested in integration level. To test mojo `compress`, the directory `test/resources` contains js source files which serve as input files to be optimized; each batch of tests uses a different pom file in `test/resources/its`. Observers are registered through ExecutionEvironment in a synchronized Set built from `Java's ConcurrentHashMap`, which is a Notifier and the notifications are checked/asserted as they arrive.
 
 
 
