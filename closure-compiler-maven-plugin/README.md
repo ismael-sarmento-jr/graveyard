@@ -2,8 +2,11 @@
 # Google Closure Compiler Maven Plugin (GCCMP)
 
 [Description](#description)
+
 [Historic context](#context)
+
 [Plugin Usage](#usage)
+
 [Plugin Arch & Design](#design)
 
 
