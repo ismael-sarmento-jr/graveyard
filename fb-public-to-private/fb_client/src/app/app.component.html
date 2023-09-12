@@ -1,0 +1,6 @@
+<select [value]="targetPrivacy">
+    <option></option>
+    <option *ngFor="let privacy of privacyList" value="privacy">{{privacy}}</option>
+</select>
+<button (click)="fetchAndHidePosts()">Turn my posts private</button>
+<p>Hidden posts: {{hiddenPosts}}</p>
